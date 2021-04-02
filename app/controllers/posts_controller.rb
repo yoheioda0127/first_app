@@ -2,13 +2,12 @@ class PostsController < ApplicationController
   def index
     @posts = Post.all.order(id: "DESC")
   end
-
   def create
-    Post.create(content: params[:content])
+    Post.create(content: params[:content], checked: false)
+    render json:{post: post}
   end
 
   def checked
-    binding.pry
     post = Post.find(params[:id])
       # 設定したURLパラメーターから、既読したメモのidが渡されるように設定.
       # そのidを使用して該当するレコードを取得している。
