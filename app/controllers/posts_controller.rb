@@ -21,6 +21,6 @@ class PostsController < ApplicationController
       # ここまでで更新完了
     item = Post.find(params[:id])
     render json:{post: item}
-      # JSON形式でchecked.jsに返却してあげる
+      # JSON形式でchecked.jsに返却してあげる。
   end
 end
