@@ -33,4 +33,4 @@ function memo() {
   });
 }
 window.addEventListener("load", memo);
-// windowオブジェクトにて実行
+// windowオブジェクトにて実行。
